@@ -27,5 +27,5 @@ pnpm-debug.log*
 .netlify/
 
 # Local image staging area (originals only — processed copies live in public/photos/)
-photos/
+/photos/
 
