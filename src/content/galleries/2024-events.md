@@ -4,6 +4,7 @@ description: "A small selection of recent event and corporate work."
 date: 2025-06-20
 location: "Greater Philadelphia"
 order: 3
+draft: true
 cover: "https://picsum.photos/seed/atp-events-cover/1600/2000"
 images:
   - src: "https://picsum.photos/seed/atp-events-01/2200/1500"

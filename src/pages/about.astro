@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { site } from "../lib/site.ts";
 
-const portrait = "https://picsum.photos/seed/atp-about-portrait/1200/1500";
+const portrait = "/photos/galleries/test-portfolio/04-portfolio.jpg";
 ---
 
 <BaseLayout title="About">
@@ -11,13 +11,10 @@ const portrait = "https://picsum.photos/seed/atp-about-portrait/1200/1500";
       <div class="aspect-[4/5] w-full overflow-hidden bg-stone-200">
         <img
           src={portrait}
-          alt="Aaron Thompson — placeholder portrait"
+          alt="Portrait — Aaron Thompson Photography"
           class="h-full w-full object-cover"
         />
       </div>
-      <figcaption class="mt-3 text-xs uppercase tracking-[0.18em] text-stone-400">
-        Placeholder portrait
-      </figcaption>
     </figure>
 
     <div class="max-w-2xl">

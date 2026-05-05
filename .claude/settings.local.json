@@ -31,7 +31,25 @@
       "Bash(python3 -c ' *)",
       "Bash(git -c 'user.name=Aaron Thompson' -c user.email=aamith@gmail.com commit -m 'Add layout, pages, content collections, sample galleries, contact form *)",
       "Bash(git push *)",
-      "Bash(git -c user.name=\"Aaron Thompson\" -c user.email=\"aamith@gmail.com\" commit -m \"Add empty journal/.gitkeep so glob loader has a base directory\")"
+      "Bash(git -c user.name=\"Aaron Thompson\" -c user.email=\"aamith@gmail.com\" commit -m \"Add empty journal/.gitkeep so glob loader has a base directory\")",
+      "Bash(gh api *)",
+      "Bash(netlify init *)",
+      "Bash(echo \"...\\(token retrieved, scopes: $\\(gh auth status 2>&1)",
+      "Bash(git -c user.name=\"Aaron Thompson\" -c user.email=\"aamith@gmail.com\" commit -m \"Verify Netlify auto-deploy round-trip\")",
+      "Bash(git -c user.name=\"Aaron Thompson\" -c user.email=\"aamith@gmail.com\" commit -m \"Re-trigger after making repo public\")",
+      "Bash(netlify env:set NTFY_TOPIC \"atp-contact-79b9ab8ada4dae308f10f3efc9d869fa\" --context production --force)",
+      "Bash(rm -rf netlify/functions/submission-created.mjs)",
+      "Bash(rmdir netlify/functions)",
+      "Bash(rmdir netlify *)",
+      "Bash(netlify env:unset NTFY_TOPIC --context production)",
+      "Bash(awk '{print $1, \"files total\"}')",
+      "Bash(awk '{print $1, \"files\"}')",
+      "Bash(xargs -I{} stat -f \"%z bytes %N\" \"{}\")",
+      "Bash(sips --getProperty pixelWidth --getProperty pixelHeight \"photos/St Vincent 1.JPG\")",
+      "Bash(mkdir -p public/photos/galleries/test-portfolio)",
+      "Bash(python3)",
+      "Bash(git mv *)",
+      "Bash(git -c 'user.name=Aaron Thompson' -c user.email=aamith@gmail.com commit -m 'Wire 10 archive photos into test portfolio *)"
     ]
   }
 }
