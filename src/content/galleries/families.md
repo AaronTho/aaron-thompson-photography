@@ -1,0 +1,31 @@
+---
+title: "Families"
+description: "Quiet, unscripted time with families — candid moments, real connections."
+date: 2025-10-04
+location: "Utah · Philadelphia area"
+order: 3
+cover: "/photos/galleries/families/family-seven-candid-woods.jpg"
+images:
+  - src: "/photos/galleries/families/family-seven-candid-woods.jpg"
+    alt: "Family of seven, candid in the woods"
+  - src: "/photos/galleries/families/family-amparan-2025.jpg"
+    alt: "Amparan family session, 2025"
+  - src: "/photos/galleries/families/family-haglund-2025.jpg"
+    alt: "Haglund family portraits, 2025"
+  - src: "/photos/galleries/families/family-reese-2025.jpg"
+    alt: "Reese family portraits, 2025"
+  - src: "/photos/galleries/families/family-zach-mary-111.jpg"
+    alt: "Zach and Mary family session, 2025"
+  - src: "/photos/galleries/families/family-zach-mary-62.jpg"
+    alt: "Zach and Mary family session, 2025"
+  - src: "/photos/galleries/families/family-birthday-cake-candlelight.jpg"
+    alt: "Birthday cake by candlelight"
+  - src: "/photos/galleries/families/family-boys-dressed-up-mothers-hand.jpg"
+    alt: "Boys dressed up, mother's hand"
+  - src: "/photos/galleries/families/family-kids-group-window-frame.jpg"
+    alt: "Kids group, window frame"
+  - src: "/photos/galleries/families/family-mom-three-kids-bench.jpg"
+    alt: "Mom with three kids on bench"
+  - src: "/photos/galleries/families/family-mom-three-kids.jpg"
+    alt: "Mom with three kids"
+---

@@ -1,0 +1,31 @@
+---
+title: "Lifestyle"
+description: "People doing things they love — movement, light, and unguarded moments."
+date: 2025-10-10
+location: "Utah · Philadelphia area · on the road"
+order: 6
+cover: "/photos/galleries/lifestyle/lifestyle-kids-dog-through-glass.jpg"
+images:
+  - src: "/photos/galleries/lifestyle/lifestyle-kids-dog-through-glass.jpg"
+    alt: "Kids and dog through glass door"
+  - src: "/photos/galleries/lifestyle/lifestyle-girl-ballerina-painting-museum.jpg"
+    alt: "Girl ballerina at painting in museum"
+  - src: "/photos/galleries/lifestyle/lifestyle-two-kids-sheer-curtains.jpg"
+    alt: "Two kids behind sheer curtains"
+  - src: "/photos/galleries/lifestyle/lifestyle-two-girls-peeking-curtains.jpg"
+    alt: "Two girls peeking through curtains"
+  - src: "/photos/galleries/lifestyle/lifestyle-musician-guitar-room.jpg"
+    alt: "Musician with guitar in room"
+  - src: "/photos/galleries/lifestyle/lifestyle-girl-leaning-train-window.jpg"
+    alt: "Girl leaning against train window"
+  - src: "/photos/galleries/lifestyle/lifestyle-kids-art-museum.jpg"
+    alt: "Kids at art museum"
+  - src: "/photos/galleries/lifestyle/lifestyle-pioneer-reenactor-aspen-trees.jpg"
+    alt: "Pioneer reenactor among aspen trees"
+  - src: "/photos/galleries/lifestyle/lifestyle-skateboarder-trick.jpg"
+    alt: "Skateboarder mid-trick"
+  - src: "/photos/galleries/lifestyle/lifestyle-two-kids-diamond-wall-cutout.jpg"
+    alt: "Two kids at diamond wall cutout"
+  - src: "/photos/galleries/lifestyle/travel-portrait-woman-cathedral-rooftop.jpg"
+    alt: "Woman portrait on cathedral rooftop"
+---
