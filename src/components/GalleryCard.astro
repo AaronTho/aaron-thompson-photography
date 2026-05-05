@@ -1,0 +1,29 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  cover: string;
+  meta?: string;
+}
+
+const { href, title, cover, meta } = Astro.props;
+---
+
+<a
+  href={href}
+  class="group block"
+>
+  <div class="aspect-[4/5] w-full overflow-hidden bg-stone-200">
+    <img
+      src={cover}
+      alt={title}
+      loading="lazy"
+      decoding="async"
+      class="h-full w-full object-cover transition-[opacity,transform] duration-700 ease-out group-hover:scale-[1.02] group-hover:opacity-95"
+    />
+  </div>
+  <div class="mt-4">
+    <h3 class="font-display text-lg font-light text-stone-900">{title}</h3>
+    {meta && <p class="mt-1 text-xs uppercase tracking-[0.18em] text-stone-500">{meta}</p>}
+  </div>
+</a>

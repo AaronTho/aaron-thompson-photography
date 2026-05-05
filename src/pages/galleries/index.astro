@@ -1,0 +1,45 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import GalleryCard from "../../components/GalleryCard.astro";
+
+const galleries = (await getCollection("galleries", ({ data }) => !data.draft))
+  .sort((a, b) => {
+    if (a.data.order != null && b.data.order != null) return a.data.order - b.data.order;
+    return b.data.date.getTime() - a.data.date.getTime();
+  });
+
+const dateFmt = new Intl.DateTimeFormat("en-US", { month: "long", year: "numeric" });
+---
+
+<BaseLayout title="Galleries">
+  <section class="mx-auto max-w-6xl px-6 pt-16 pb-24 sm:px-8 sm:pt-24 lg:px-12">
+    <header class="mb-14 max-w-2xl">
+      <p class="text-xs uppercase tracking-[0.22em] text-stone-500">Galleries</p>
+      <h1 class="mt-4 font-display text-4xl font-light leading-tight text-stone-900 sm:text-5xl">
+        Selected sessions and series.
+      </h1>
+      <p class="mt-6 text-base leading-relaxed text-stone-600 sm:text-lg">
+        A small, evolving selection — portrait sessions, family work, events, and quieter
+        personal projects. New galleries added as recent work is finished.
+      </p>
+    </header>
+
+    {
+      galleries.length === 0 ? (
+        <p class="text-stone-500">No galleries published yet.</p>
+      ) : (
+        <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-10 lg:gap-y-16">
+          {galleries.map((g) => (
+            <GalleryCard
+              href={`/galleries/${g.id}`}
+              title={g.data.title}
+              cover={g.data.cover ?? g.data.images[0]?.src ?? ""}
+              meta={g.data.location ?? dateFmt.format(g.data.date)}
+            />
+          ))}
+        </div>
+      )
+    }
+  </section>
+</BaseLayout>

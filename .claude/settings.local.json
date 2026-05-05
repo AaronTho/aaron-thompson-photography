@@ -15,7 +15,21 @@
       "Bash(npm run *)",
       "Bash(git init *)",
       "Bash(git add *)",
-      "Bash(git -c user.name=\"Aaron Thompson\" -c user.email=\"aamith@gmail.com\" commit -m \"Initial scaffold: Astro 6 + TypeScript + Tailwind v4 + MDX\")"
+      "Bash(git -c user.name=\"Aaron Thompson\" -c user.email=\"aamith@gmail.com\" commit -m \"Initial scaffold: Astro 6 + TypeScript + Tailwind v4 + MDX\")",
+      "Bash(gh auth *)",
+      "Read(//Users/aaronthompson/.config/**)",
+      "Read(//Users/aaronthompson/.config/gh/**)",
+      "Bash(GH_PROMPT_DISABLED=1 gh auth status)",
+      "Bash(gh repo *)",
+      "Bash(netlify status *)",
+      "Bash(netlify api *)",
+      "Bash(python3 -c \"import sys, json; d=json.load\\(sys.stdin\\); print\\('\\\\n'.join\\([f\\\\\"{a.get\\('name','?'\\)}\\\\t{a.get\\('slug','?'\\)}\\\\\" for a in d]\\)\\)\")",
+      "Bash(netlify sites:create --name aaron-thompson-photography --account-slug aamith)",
+      "Bash(netlify deploy *)",
+      "Bash(python3 -c \"import sys, json; d=json.load\\(sys.stdin\\); print\\('build_settings.repo_url:', d.get\\('build_settings', {}\\).get\\('repo_url'\\)\\); print\\('build_settings.cmd:', d.get\\('build_settings', {}\\).get\\('cmd'\\)\\); print\\('build_settings.dir:', d.get\\('build_settings', {}\\).get\\('dir'\\)\\); print\\('build_settings.branch:', d.get\\('build_settings', {}\\).get\\('branch'\\)\\); print\\('published_deploy.url:', d.get\\('published_deploy', {}\\).get\\('url'\\) if d.get\\('published_deploy'\\) else None\\); print\\('published_deploy.state:', d.get\\('published_deploy', {}\\).get\\('state'\\) if d.get\\('published_deploy'\\) else None\\); print\\('url:', d.get\\('url'\\)\\)\")",
+      "Bash(python3 -c \"import sys, json; d=json.load\\(sys.stdin\\); [print\\(f\\\\\"{x.get\\('created_at'\\)}  state={x.get\\('state'\\)}  branch={x.get\\('branch'\\)}  context={x.get\\('context'\\)}  commit={x.get\\('commit_ref',''\\)[:8] if x.get\\('commit_ref'\\) else 'none'}  msg={\\(x.get\\('title'\\) or ''\\)[:60]}\\\\\"\\) for x in d])",
+      "Bash(python3 -c ' *)",
+      "Bash(git -c 'user.name=Aaron Thompson' -c user.email=aamith@gmail.com commit -m 'Add layout, pages, content collections, sample galleries, contact form *)"
     ]
   }
 }

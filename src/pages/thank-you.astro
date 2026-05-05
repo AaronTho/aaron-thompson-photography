@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Message received">
+  <section class="mx-auto flex min-h-[60vh] max-w-xl flex-col items-center justify-center px-6 py-24 text-center sm:px-8">
+    <p class="text-xs uppercase tracking-[0.22em] text-stone-500">Message received</p>
+    <h1 class="mt-6 font-display text-4xl font-light leading-tight text-stone-900 sm:text-5xl">
+      Thank you.
+    </h1>
+    <p class="mt-6 text-base leading-relaxed text-stone-600 sm:text-lg">
+      I’ll get back to you within a day or two. If it’s urgent, feel free to text or call.
+    </p>
+    <a
+      href="/"
+      class="mt-10 border-b border-stone-900 pb-1 text-[0.78rem] uppercase tracking-[0.18em] text-stone-900 transition-opacity hover:opacity-70"
+    >
+      Back home
+    </a>
+  </section>
+</BaseLayout>

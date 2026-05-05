@@ -1,0 +1,80 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../lib/site.ts";
+
+const portrait = "https://picsum.photos/seed/atp-about-portrait/1200/1500";
+---
+
+<BaseLayout title="About">
+  <article class="mx-auto grid max-w-6xl gap-12 px-6 pt-16 pb-24 sm:px-8 sm:pt-24 lg:grid-cols-[minmax(0,1fr)_1.4fr] lg:gap-20 lg:px-12">
+    <figure class="lg:sticky lg:top-12 lg:self-start">
+      <div class="aspect-[4/5] w-full overflow-hidden bg-stone-200">
+        <img
+          src={portrait}
+          alt="Aaron Thompson — placeholder portrait"
+          class="h-full w-full object-cover"
+        />
+      </div>
+      <figcaption class="mt-3 text-xs uppercase tracking-[0.18em] text-stone-400">
+        Placeholder portrait
+      </figcaption>
+    </figure>
+
+    <div class="max-w-2xl">
+      <p class="text-xs uppercase tracking-[0.22em] text-stone-500">About</p>
+      <h1 class="mt-4 font-display text-4xl font-light leading-tight text-stone-900 sm:text-5xl">
+        I’ve been a portrait photographer for 25 years.
+      </h1>
+
+      <div class="mt-10 space-y-6 text-base leading-relaxed text-stone-700 sm:text-lg">
+        <p>
+          I built my career over two decades in Utah — weddings, families, seniors, events,
+          and corporate work — and recently relocated with my family to the Philadelphia
+          area, where I’m now based. The work hasn’t changed: portraits, families, events,
+          and the kind of unscripted lifestyle photography that holds up over time. The
+          light is just different now, and that’s been a good thing.
+        </p>
+        <p>
+          What I care about hasn’t changed either. I want the people in front of my camera
+          to look like themselves on a good day — relaxed, recognizable, a little bit
+          better-lit than they expected. I like sessions that feel more like a conversation
+          than a performance. I think most of the best frames happen between the ones
+          people think they’re being photographed for.
+        </p>
+        <p>
+          Based in Delco, serving the greater Philadelphia and Main Line area. If you’d
+          like to work together,
+          <a
+            href="/contact"
+            class="border-b border-stone-400 pb-px text-stone-900 transition-colors hover:border-stone-900"
+          >
+            get in touch
+          </a>.
+        </p>
+      </div>
+
+      <dl class="mt-12 grid gap-x-8 gap-y-4 border-t border-stone-200 pt-8 text-sm sm:grid-cols-2">
+        <div>
+          <dt class="text-xs uppercase tracking-[0.18em] text-stone-500">Email</dt>
+          <dd class="mt-1">
+            <a href={site.emailHref} class="text-stone-800 transition-colors hover:text-stone-900">
+              {site.email}
+            </a>
+          </dd>
+        </div>
+        <div>
+          <dt class="text-xs uppercase tracking-[0.18em] text-stone-500">Phone</dt>
+          <dd class="mt-1">
+            <a href={site.phoneHref} class="text-stone-800 transition-colors hover:text-stone-900">
+              {site.phone}
+            </a>
+          </dd>
+        </div>
+        <div class="sm:col-span-2">
+          <dt class="text-xs uppercase tracking-[0.18em] text-stone-500">Service area</dt>
+          <dd class="mt-1 text-stone-800">{site.area}</dd>
+        </div>
+      </dl>
+    </div>
+  </article>
+</BaseLayout>

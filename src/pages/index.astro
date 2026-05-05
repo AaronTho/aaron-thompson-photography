@@ -1,23 +1,77 @@
 ---
-import '../styles/global.css';
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GalleryCard from "../components/GalleryCard.astro";
+import { site } from "../lib/site.ts";
+
+const galleries = (await getCollection("galleries", ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 3);
+
+const heroImage = "https://picsum.photos/seed/atp-hero-001/1800/2200";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Aaron Thompson Photography</title>
-	</head>
-	<body class="min-h-screen bg-stone-50 text-stone-900 antialiased">
-		<main class="mx-auto flex min-h-screen max-w-2xl flex-col items-center justify-center px-6 text-center">
-			<p class="text-xs uppercase tracking-[0.2em] text-stone-500">Aaron Thompson Photography</p>
-			<h1 class="mt-6 text-3xl font-light text-stone-800 sm:text-4xl">Site coming together.</h1>
-			<p class="mt-4 max-w-md text-sm text-stone-600">
-				Portrait, family, event, and lifestyle photography &mdash; based in Delco,
-				serving the greater Philadelphia and Main Line area.
-			</p>
-		</main>
-	</body>
-</html>
+<BaseLayout>
+  <section class="relative">
+    <div class="aspect-[4/5] w-full overflow-hidden bg-stone-200 sm:aspect-[16/10] sm:max-h-[80vh]">
+      <img
+        src={heroImage}
+        alt="Soft natural light portrait — placeholder"
+        class="h-full w-full object-cover"
+        fetchpriority="high"
+      />
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-3xl px-6 pt-16 pb-20 text-center sm:px-8 sm:pt-24 sm:pb-28">
+    <p class="text-xs uppercase tracking-[0.22em] text-stone-500">{site.area}</p>
+    <h1 class="mt-6 font-display text-4xl font-light leading-[1.1] tracking-tight text-stone-900 sm:text-5xl md:text-6xl">
+      Quiet, honest portraits
+      <span class="block italic text-stone-700">of people on a good day.</span>
+    </h1>
+    <p class="mx-auto mt-8 max-w-xl text-base leading-relaxed text-stone-600 sm:text-lg">
+      {site.tagline} Twenty-five years of work, recently moved to the Philadelphia area
+      and taking on new sessions.
+    </p>
+    <div class="mt-10 flex items-center justify-center gap-6 text-[0.78rem] uppercase tracking-[0.18em]">
+      <a
+        href="/galleries"
+        class="border-b border-stone-900 pb-1 text-stone-900 transition-opacity hover:opacity-70"
+      >
+        See the work
+      </a>
+      <a
+        href="/contact"
+        class="border-b border-transparent pb-1 text-stone-500 transition-colors hover:border-stone-400 hover:text-stone-900"
+      >
+        Get in touch
+      </a>
+    </div>
+  </section>
+
+  {
+    galleries.length > 0 && (
+      <section class="mx-auto max-w-6xl px-6 pb-24 sm:px-8 lg:px-12">
+        <div class="mb-10 flex items-end justify-between border-b border-stone-200 pb-4">
+          <h2 class="font-display text-2xl font-light text-stone-900">Selected work</h2>
+          <a
+            href="/galleries"
+            class="text-[0.78rem] uppercase tracking-[0.18em] text-stone-500 transition-colors hover:text-stone-900"
+          >
+            All galleries →
+          </a>
+        </div>
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
+          {galleries.map((g) => (
+            <GalleryCard
+              href={`/galleries/${g.id}`}
+              title={g.data.title}
+              cover={g.data.cover ?? g.data.images[0]?.src ?? ""}
+              meta={g.data.location}
+            />
+          ))}
+        </div>
+      </section>
+    )
+  }
+</BaseLayout>

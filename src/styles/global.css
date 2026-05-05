@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Fraunces Variable", ui-serif, Georgia, "Times New Roman", serif;
+
+  --color-cream-50: #faf8f4;
+  --color-cream-100: #f3efe6;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--color-stone-50);
+    color: var(--color-stone-800);
+  }
+
+  ::selection {
+    background-color: var(--color-stone-800);
+    color: var(--color-stone-50);
+  }
+}

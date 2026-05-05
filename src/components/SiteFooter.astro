@@ -1,0 +1,29 @@
+---
+import { site } from "../lib/site.ts";
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-24 border-t border-stone-200/70">
+  <div class="mx-auto grid max-w-6xl gap-8 px-6 py-12 text-sm text-stone-500 sm:grid-cols-2 sm:px-8 sm:py-16 lg:px-12">
+    <div>
+      <p class="font-display text-base font-light text-stone-800">{site.name}</p>
+      <p class="mt-2 max-w-xs leading-relaxed">{site.tagline}</p>
+      <p class="mt-2 max-w-xs leading-relaxed">{site.area}.</p>
+    </div>
+    <div class="sm:text-right">
+      <p>
+        <a href={site.emailHref} class="text-stone-700 transition-colors hover:text-stone-900">
+          {site.email}
+        </a>
+      </p>
+      <p class="mt-1">
+        <a href={site.phoneHref} class="text-stone-700 transition-colors hover:text-stone-900">
+          {site.phone}
+        </a>
+      </p>
+      <p class="mt-6 text-xs uppercase tracking-[0.18em] text-stone-400">
+        © {year} Aaron Thompson
+      </p>
+    </div>
+  </div>
+</footer>
