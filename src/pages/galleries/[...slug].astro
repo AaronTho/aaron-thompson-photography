@@ -19,10 +19,7 @@ const dateFmt = new Intl.DateTimeFormat("en-US", { month: "long", year: "numeric
 <BaseLayout title={entry.data.title} description={entry.data.description}>
   <article class="mx-auto max-w-5xl px-6 pt-16 pb-24 sm:px-8 sm:pt-24 lg:px-12">
     <header class="mx-auto max-w-2xl text-center">
-      <p class="text-xs uppercase tracking-[0.22em] text-stone-500">
-        {entry.data.location ?? dateFmt.format(entry.data.date)}
-      </p>
-      <h1 class="mt-4 font-display text-4xl font-light leading-tight text-stone-900 sm:text-5xl">
+<h1 class="mt-4 font-display text-4xl font-light leading-tight text-stone-900 sm:text-5xl">
         {entry.data.title}
       </h1>
       {
