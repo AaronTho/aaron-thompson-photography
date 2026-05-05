@@ -4,7 +4,7 @@ description: "Quiet, unscripted time with families — candid moments, real conn
 date: 2025-10-04
 location: "Utah · Philadelphia area"
 order: 3
-cover: "/photos/galleries/families/family-seven-candid-woods.jpg"
+cover: "/photos/galleries/families/family-boys-dressed-up-mothers-hand.jpg"
 images:
   - src: "/photos/galleries/families/family-seven-candid-woods.jpg"
     alt: "Family of seven, candid in the woods"
