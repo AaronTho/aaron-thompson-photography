@@ -4,7 +4,7 @@ description: "A curated mix drawn from portrait, family, wedding, lifestyle, and
 date: 2025-10-15
 location: "Across years"
 order: 1
-cover: "/photos/galleries/portraits/portrait-girl-blue-eyes-fur-coat.jpg"
+cover: "/photos/galleries/weddings/wedding-couple-kiss-red-rocks.jpg"
 images:
   - src: "/photos/galleries/portraits/portrait-girl-blue-eyes-fur-coat.jpg"
     alt: "Girl in fur coat, blue eyes"
