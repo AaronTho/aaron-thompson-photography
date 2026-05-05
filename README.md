@@ -4,6 +4,7 @@ Personal photography portfolio — portrait, family, event, and lifestyle work.
 Based in Delco, serving the greater Philadelphia and Main Line area.
 
 > Auto-deploy on push to `main` is wired up via Netlify ↔ GitHub.
+> Live at https://aaron-thompson-photography.netlify.app.
 
 ## Stack
 
