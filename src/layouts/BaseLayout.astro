@@ -10,17 +10,56 @@ import { site } from "../lib/site.ts";
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
   /** Use a tighter container for narrow text pages (about, contact). */
   narrow?: boolean;
 }
 
+const defaultDescription =
+  "Portrait, family, event, and lifestyle photography by Aaron Thompson — based in the Philadelphia area, available anywhere.";
+
 const {
   title,
-  description = "Portrait, family, event, and lifestyle photography by Aaron Thompson — based in Delco, serving the greater Philadelphia and Main Line area.",
+  description = defaultDescription,
+  image = "/photos/galleries/lifestyle/travel-portrait-woman-cathedral-rooftop.jpg",
   narrow = false,
 } = Astro.props;
 
 const fullTitle = title ? `${title} — ${site.name}` : site.name;
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+const ogImage = new URL(image, Astro.site).toString();
+
+const localBusiness = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: site.name,
+  image: ogImage,
+  description: defaultDescription,
+  url: Astro.site?.toString(),
+  email: site.email,
+  address: {
+    "@type": "PostalAddress",
+    addressRegion: "PA",
+    addressCountry: "US",
+  },
+  areaServed: [
+    { "@type": "AdministrativeArea", name: "Greater Philadelphia" },
+    { "@type": "AdministrativeArea", name: "Main Line" },
+    { "@type": "AdministrativeArea", name: "Delaware County, PA" },
+  ],
+  founder: {
+    "@type": "Person",
+    name: "Aaron Thompson",
+  },
+  knowsAbout: [
+    "Portrait photography",
+    "Family photography",
+    "Wedding photography",
+    "Senior portraits",
+    "Lifestyle photography",
+    "Event photography",
+  ],
+};
 ---
 
 <!doctype html>
@@ -30,12 +69,22 @@ const fullTitle = title ? `${title} — ${site.name}` : site.name;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonical} />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
     <meta name="theme-color" content="#faf8f4" />
+    <script type="application/ld+json" set:html={JSON.stringify(localBusiness)} />
   </head>
   <body class="flex min-h-screen flex-col bg-stone-50 text-stone-800 antialiased">
     <SiteHeader />
