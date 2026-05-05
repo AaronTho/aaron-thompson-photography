@@ -4,7 +4,7 @@ description: "Wedding days and engagement sessions — the real moments between 
 date: 2025-10-08
 location: "Utah · Colorado · beyond"
 order: 5
-cover: "/photos/galleries/weddings/wedding-couple-kiss-red-rocks.jpg"
+cover: "/photos/galleries/weddings/wedding-hero-1.jpg"
 images:
   - src: "/photos/galleries/weddings/wedding-couple-kiss-red-rocks.jpg"
     alt: "Couple kissing at red rocks"
