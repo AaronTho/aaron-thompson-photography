@@ -2,7 +2,7 @@ export const site = {
   name: "Aaron Thompson Photography",
   short: "Aaron Thompson",
   tagline: "Portrait, family, event, and lifestyle photography.",
-  area: "Delco · greater Philadelphia · Main Line",
+  area: "Based in Delco · available anywhere",
   email: "aamith@gmail.com",
 emailHref: "mailto:aamith@gmail.com",
 } as const;
