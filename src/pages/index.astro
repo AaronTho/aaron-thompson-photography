@@ -8,7 +8,7 @@ const FEATURED = ["portraits", "families", "weddings"];
 const allGalleries = await getCollection("galleries", ({ data }) => !data.draft);
 const galleries = FEATURED.map((id) => allGalleries.find((g) => g.id === id)).filter(Boolean);
 
-const heroImage = "/photos/galleries/portraits/portrait-girl-autumn-leaf.jpg";
+const heroImage = "/photos/galleries/portraits/portrait-boy-striped-hoodie.jpg";
 ---
 
 <BaseLayout>
