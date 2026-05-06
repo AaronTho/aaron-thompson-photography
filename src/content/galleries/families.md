@@ -28,4 +28,10 @@ images:
     alt: "Mom with three kids on bench"
   - src: "/photos/galleries/families/family-mom-three-kids.jpg"
     alt: "Mom with three kids"
+  - src: "/photos/galleries/families/family-philly-skyline.jpg"
+    alt: "Family of seven in front of the Philadelphia skyline"
+  - src: "/photos/galleries/families/family-mom-two-sons.jpg"
+    alt: "Mom in a quiet moment with her two sons"
+  - src: "/photos/galleries/families/family-siblings-museum-steps.jpg"
+    alt: "Siblings on the steps of the Philadelphia Museum of Art"
 ---

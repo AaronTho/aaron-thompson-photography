@@ -22,4 +22,8 @@ images:
     alt: "Senior girl on escalator"
   - src: "/photos/galleries/seniors/seniors-prom-group.jpg"
     alt: "Prom group portrait"
+  - src: "/photos/galleries/seniors/seniors-girl-overalls-museum.jpg"
+    alt: "Senior portrait at the Philadelphia Museum of Art"
+  - src: "/photos/galleries/seniors/seniors-girl-bench-cityhall.jpg"
+    alt: "Senior portrait on a bench, City Hall behind"
 ---
