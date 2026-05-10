@@ -38,4 +38,6 @@ images:
     alt: "Couple portrait at rustic barn"
   - src: "/photos/galleries/weddings/couple-portrait-urban-suspenders.jpg"
     alt: "Couple portrait — urban, suspenders"
+  - src: "/photos/galleries/weddings/couple-engagement-couch-laughing-bw.jpg"
+    alt: "Engagement — couple laughing on the couch, black and white"
 ---
