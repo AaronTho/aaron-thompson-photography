@@ -64,4 +64,6 @@ images:
     alt: "Two boys in cowboy hats"
   - src: "/photos/galleries/portraits/portrait-two-kids-wrapped-blanket.jpg"
     alt: "Two kids wrapped in blanket"
+  - src: "/photos/galleries/portraits/portrait-young-man-window-rain.jpg"
+    alt: "Young man at the window, black and white"
 ---
